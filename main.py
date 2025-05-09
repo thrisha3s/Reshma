@@ -1,3 +1,4 @@
+source code:
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -73,3 +74,30 @@ for statement in test_statements:
     print(f"\nStatement: '{statement}'")
     print(f"Prediction: {prediction}")
     print(f"Key words considered: {', '.join(important_words)}")
+output:
+=== Model Performance ===
+Accuracy: 0.00%
+
+Confusion Matrix:
+              Predicted Fake  Predicted Real
+Actually Fake     0              0
+Actually Real     2              0
+
+=== Training Data Statistics ===
+Total training samples: 8
+Total test samples: 2
+Features used: 42
+
+=== Test Predictions ===
+
+Statement: 'Scientists discover a new species in the Amazon rainforest.'
+Prediction: real
+Key words considered: staged, landing, moon, flat, earth
+
+Statement: 'Chocolate cures all diseases instantly.'
+Prediction: fake
+Key words considered: staged, landing, moon, flat, earth
+
+Statement: 'New study shows benefits of regular exercise.'
+Prediction: real
+Key words considered: staged, landing, moon, flat, earth
